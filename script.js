@@ -28,11 +28,25 @@ function reset() {
     counterValue.innerHTML = counter;
 }
 
-// dropdwon
+// dropdown
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
+  const dropbtn = document.querySelector('.dropbtn');
+  const dropdown = document.querySelector('.dropdown-content');
+  const options = document.querySelectorAll('.dropdown-content div');
+
+  dropbtn.addEventListener('click', function() {
+    dropdown.classList.toggle('show');
+  });
+
+  // replacing drop button text
+  options.forEach(option => {
+    option.addEventListener('click', function(event) {
+      var selectedText = event.target.innerText;
+      dropbtn.innerText = selectedText;
+      dropdown.classList.remove('show');
+    });
+  });
+
   
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
@@ -42,6 +56,10 @@ function myFunction() {
         }
     }
   }
+
+  //for option selection
+
+
 
 
   

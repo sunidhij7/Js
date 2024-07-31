@@ -35,6 +35,9 @@
     display: block;
   }
   
-  .dropdown-content div:hover {background-color: #ddd;}
+  .dropdown-content div:hover {background-color: #ddd;
+  cursor: pointer;}
   
   .show {display:block;}
+
+ 
