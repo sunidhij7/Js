@@ -50,14 +50,35 @@ function reset() {
   
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.querySelector(".dropdown-content");
+      var dropdowns = dropdown;
       if (dropdowns.classList.contains('show')) {
           dropdowns.classList.remove('show');
         }
     }
   }
 
-  //for option selection
+  // modal
+
+  const openBtn = document.querySelector(".open-button");
+  const modal = document.querySelector(".modal");
+  const closeBtn = document.querySelector(".close-button");
+
+
+  openBtn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  closeBtn.onclick = () =>
+{
+  modal.style.display="none";
+}  
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 
 
