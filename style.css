@@ -67,9 +67,15 @@
 }
 
 /* Accordian */
+ul{
+  list-style-type: none;
+  padding: 20px;
+}
+
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -86,3 +92,30 @@
   overflow: hidden;
 }
 
+li{
+  padding: 10px;
+}
+
+.open-tab{
+  border: 1px solid hsl(0, 0%, 89%) ;
+  border-radius: 1rem;
+  
+}
+
+.accordion-container{
+  border-radius: 1rem;
+  .first-row{
+    border-top: 1px solid hsl(0, 0%, 89%);
+  }
+  .row{
+    border-left: 1px solid hsl(0, 0%, 89%);
+    border-right: 1px solid hsl(0, 0%, 89%);
+    border-bottom: 1px solid hsl(0, 0%, 89%);
+    border-radius: 1rem;
+
+
+  }
+  .last-row{
+    border-bottom: 1px solid hsl(0, 0%, 89%);
+  }
+}

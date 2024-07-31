@@ -93,11 +93,21 @@ for (let i = 0; i < accordion.length; i++) {
     for (let j = 0; j < accordion.length; j++) {
       if (accordion[j] !== this) {
         accordion[j].classList.remove("active");
+        accordion[j].parentElement.classList.remove("open-tab");
         accordion[j].nextElementSibling.style.display = "none";
       }
     }
 
     this.classList.toggle("active"); //using this line to track state (for ease of styling)
+  
+    if(this.classList.contains("active")){
+      this.parentElement.classList.add("open-tab");
+    }
+    else{
+      this.parentElement.classList.remove("open-tab");
+
+    }
+
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
