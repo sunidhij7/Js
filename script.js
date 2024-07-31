@@ -84,15 +84,20 @@ window.onclick = function (event) {
   }
 };
 
-// accordian
+// accordion
 
-const acc = document.querySelectorAll(".accordion");
+const accordion = document.querySelectorAll(".accordion");
+for (let i = 0; i < accordion.length; i++) {
+  accordion[i].addEventListener("click", function() {
 
-var i;
+    for (let j = 0; j < accordion.length; j++) {
+      if (accordion[j] !== this) {
+        accordion[j].classList.remove("active");
+        accordion[j].nextElementSibling.style.display = "none";
+      }
+    }
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+    this.classList.toggle("active"); //using this line to track state (for ease of styling)
     var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
