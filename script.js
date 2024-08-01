@@ -8,8 +8,9 @@ const resetBtn = document.querySelector(".reset");
 // To increment the value of counter
 incrementBtn.addEventListener("click", () => {
   counter++;
-  
+
   counterValue.innerHTML = counter;
+
 });
 
 // To decrement the value of counter
@@ -17,6 +18,7 @@ decrementBtn.addEventListener("click", () => {
   if (counter > 0) {
     counter--;
   }
+  
   counterValue.innerHTML = counter;
 });
 
