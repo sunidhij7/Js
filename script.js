@@ -1,4 +1,5 @@
-let counter = 0;
+if(document.querySelector(".counter")){
+  let counter = 0;
 
 const counterValue = document.querySelector(".counter__value");
 const incrementBtn = document.querySelector(".counter__buttons--increase ");
@@ -26,6 +27,10 @@ function reset() {
   counterValue.innerHTML = counter;
 }
 
+
+
+}
+if(document.querySelector(".dropdown")){
 // dropdown
 const dropdownOpenTrigger = document.querySelector(".dropdown__trigger-button");
 const dropdown = document.querySelector(".dropdown__panel");
@@ -49,11 +54,10 @@ window.onclick = function (event) {
     if (dropdown.classList.contains("show")) {
       dropdown.classList.remove("show");
     }
-  } else if (event.target == modal) {
-    modal.style.display = "none";
   }
 };
-
+}
+if(document.querySelector(".modal")){
 // modal
 
 const openBtn = document.querySelector(".modal__trigger-button");
@@ -72,18 +76,15 @@ closeBtn.onclick = () => {
 
 //Closing windows
 window.onclick = function (event) {
-  if (!event.target.matches(".dropdown__trigger-button")) {
-    const dropdowns = dropdown;
-    if (dropdowns.classList.contains("show")) {
-      dropdowns.classList.remove("show");
-    }
-  }
   if (event.target == modal) {
     modal.style.display = "none";
   }
 };
 
-// accordion
+}
+
+if(document.querySelector(".accord")){
+  // accordion
 const accordion = document.querySelectorAll(".accordion");
 for (let i = 0; i < accordion.length; i++) {
   accordion[i].addEventListener("click", function () {
@@ -111,3 +112,8 @@ for (let i = 0; i < accordion.length; i++) {
     }
   });
 }
+
+}
+
+
+
