@@ -6,7 +6,7 @@ const decrementBtn = document.querySelector(".decrease");
 const resetBtn = document.querySelector(".reset");
 
 // To increment the value of counter
-incrementBtn.addEventListener("click", () => {
+incrementBtn.addEventListener('click', () => {
   counter++;
   counterValue.innerHTML = counter;
 });
