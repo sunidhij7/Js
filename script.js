@@ -1,12 +1,12 @@
 let counter = 0;
 
-const counterValue = document.querySelector(".counter-value");
-const incrementBtn = document.querySelector(".increase");
-const decrementBtn = document.querySelector(".decrease");
-const resetBtn = document.querySelector(".reset");
+const counterValue = document.querySelector(".counter__value");
+const incrementBtn = document.querySelector(".counter__buttons--increase ");
+const decrementBtn = document.querySelector(".counter__buttons--decrease");
+const resetBtn = document.querySelector(".counter__buttons--reset");
 
 // To increment the value of counter
-incrementBtn.addEventListener('click', () => {
+incrementBtn.addEventListener("click", () => {
   counter++;
   counterValue.innerHTML = counter;
 });
@@ -82,11 +82,9 @@ window.onclick = function (event) {
 };
 
 // accordion
-
 const accordion = document.querySelectorAll(".accordion");
 for (let i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", function() {
-
+  accordion[i].addEventListener("click", function () {
     for (let j = 0; j < accordion.length; j++) {
       if (accordion[j] !== this) {
         accordion[j].classList.remove("active");
@@ -96,13 +94,11 @@ for (let i = 0; i < accordion.length; i++) {
     }
 
     this.classList.toggle("active"); //using this line to track state (for ease of styling)
-  
-    if(this.classList.contains("active")){
-      this.parentElement.classList.add("open-tab");
-    }
-    else{
-      this.parentElement.classList.remove("open-tab");
 
+    if (this.classList.contains("active")) {
+      this.parentElement.classList.add("open-tab");
+    } else {
+      this.parentElement.classList.remove("open-tab");
     }
 
     const panel = this.nextElementSibling;
