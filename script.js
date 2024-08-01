@@ -27,11 +27,11 @@ function reset() {
 }
 
 // dropdown
-const dropbtn = document.querySelector(".dropbtn");
-const dropdown = document.querySelector(".dropdown-content");
-const options = document.querySelectorAll(".dropdown-content div");
+const dropdownOpenTrigger = document.querySelector(".dropdown__trigger-button");
+const dropdown = document.querySelector(".dropdown__panel");
+const options = document.querySelectorAll(".dropdown__panel__option");
 
-dropbtn.addEventListener("click", function () {
+dropdownOpenTrigger.addEventListener("click", function () {
   dropdown.classList.toggle("show");
 });
 
@@ -39,13 +39,13 @@ dropbtn.addEventListener("click", function () {
 options.forEach((option) => {
   option.addEventListener("click", function (event) {
     const selectedText = event.target.innerText;
-    dropbtn.innerText = selectedText;
+    dropdownOpenTrigger.innerText = selectedText;
     dropdown.classList.remove("show");
   });
 });
 
 window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
+  if (!event.target.matches(".dropdown__trigger-button")) {
     if (dropdown.classList.contains("show")) {
       dropdown.classList.remove("show");
     }
@@ -70,7 +70,7 @@ closeBtn.onclick = () => {
 
 //Closing windows
 window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
+  if (!event.target.matches(".dropdown__trigger-button")) {
     const dropdowns = dropdown;
     if (dropdowns.classList.contains("show")) {
       dropdowns.classList.remove("show");
