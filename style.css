@@ -1,5 +1,5 @@
 /* Dropdown Button */
-.dropbtn {
+.dropdown__trigger-button {
     background-color: #3498DB;
     color: white;
     padding: 16px;
@@ -8,7 +8,7 @@
     cursor: pointer;
   }
 
-  .dropbtn:hover, .dropbtn:focus {
+  .dropdown__trigger-button:hover, .dropdown__trigger-button:focus {
     background-color: #2980B9;
   }
   
@@ -18,7 +18,7 @@
   }
   
   /* Dropdown Content */
-  .dropdown-content {
+  .dropdown__panel {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -28,20 +28,20 @@
   }
   
   /* Links inside the dropdown */
-  .dropdown-content div {
+  .dropdown__panel__option {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
-  .dropdown-content div:hover {background-color: #ddd;
+  .dropdown__panel__option:hover {background-color: #ddd;
   cursor: pointer;}
   
   .show {display:block;}
 
  /* Modal */
- .modal {
+ .modal__background-panel{
   display: none; 
   position: fixed; 
   z-index: 1; 
@@ -54,7 +54,7 @@
   background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-content {
+.modal__background-panel__foreground-panel {
   background-color: #fefefe;
   margin: 15% auto; 
   padding: 20px;
@@ -62,7 +62,7 @@
   width: 80%; 
 }
 
-.close-button:hover{
+.modal__background-panel__foreground-panel--close-trigger:hover{
   cursor: pointer;
 }
 
