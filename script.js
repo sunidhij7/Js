@@ -56,9 +56,11 @@ window.onclick = function (event) {
 
 // modal
 
-const openBtn = document.querySelector(".open-button");
-const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".close-button");
+const openBtn = document.querySelector(".modal__trigger-button");
+const modal = document.querySelector(".modal__background-panel");
+const closeBtn = document.querySelector(
+  ".modal__background-panel__foreground-panel--close-trigger"
+);
 
 openBtn.onclick = function () {
   modal.style.display = "block";
