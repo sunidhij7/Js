@@ -8,9 +8,7 @@ const resetBtn = document.querySelector(".reset");
 // To increment the value of counter
 incrementBtn.addEventListener('click', () => {
   counter++;
-
   counterValue.innerHTML = counter;
-
 });
 
 // To decrement the value of counter
@@ -18,20 +16,17 @@ decrementBtn.addEventListener("click", () => {
   if (counter > 0) {
     counter--;
   }
-  
   counterValue.innerHTML = counter;
 });
 
 // To reset the counter to zero
 resetBtn.addEventListener("click", reset);
-
 function reset() {
   counter = 0;
   counterValue.innerHTML = counter;
 }
 
 // dropdown
-
 const dropbtn = document.querySelector(".dropbtn");
 const dropdown = document.querySelector(".dropdown-content");
 const options = document.querySelectorAll(".dropdown-content div");
@@ -43,7 +38,7 @@ dropbtn.addEventListener("click", function () {
 // replacing drop button text
 options.forEach((option) => {
   option.addEventListener("click", function (event) {
-    var selectedText = event.target.innerText;
+    const selectedText = event.target.innerText;
     dropbtn.innerText = selectedText;
     dropdown.classList.remove("show");
   });
@@ -51,9 +46,8 @@ options.forEach((option) => {
 
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
-    var dropdowns = dropdown;
-    if (dropdowns.classList.contains("show")) {
-      dropdowns.classList.remove("show");
+    if (dropdown.classList.contains("show")) {
+      dropdown.classList.remove("show");
     }
   } else if (event.target == modal) {
     modal.style.display = "none";
@@ -77,7 +71,7 @@ closeBtn.onclick = () => {
 //Closing windows
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
-    var dropdowns = dropdown;
+    const dropdowns = dropdown;
     if (dropdowns.classList.contains("show")) {
       dropdowns.classList.remove("show");
     }
@@ -111,7 +105,7 @@ for (let i = 0; i < accordion.length; i++) {
 
     }
 
-    var panel = this.nextElementSibling;
+    const panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {
