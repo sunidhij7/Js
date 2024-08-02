@@ -29,6 +29,8 @@ if (document.querySelector(".dropdown")) {
   );
   const dropdown = document.querySelector(".dropdown__panel");
   const options = document.querySelectorAll(".dropdown__panel__option");
+  let lastSelectedOption = null;
+
 
   dropdownOpenTrigger.addEventListener("click", function () {
     dropdown.classList.toggle("show");
@@ -37,12 +39,21 @@ if (document.querySelector(".dropdown")) {
   // replacing drop button text
   options.forEach((option) => {
     option.addEventListener("click", function (event) {
-      dropdown.classList.remove("show");
+
+      //removing previous option highlight
+      if (lastSelectedOption) {
+        lastSelectedOption.classList.remove('colored');
+    }
+
       const selectedText = event.target.innerText;
       dropdownOpenTrigger.innerText = selectedText;
-      
-      dropdown.classList.remove("colored");
       event.target.classList.add("colored")
+
+      //changing last option
+      lastSelectedOption = event.target;
+
+      dropdown.classList.remove("show");
+
     });
   });
 
