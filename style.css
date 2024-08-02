@@ -148,3 +148,27 @@ li {
   font-size: 16px;
   cursor: pointer;
 }
+
+
+/* counter */
+.counter__buttons *{ 
+  border: 1px solid hsl(0, 1%, 79%);
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1rem;
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+}
+.counter__buttons *:hover{
+  cursor: pointer;
+  box-shadow: 0 10px 16px -8px rgba(28, 28, 28, 0.3);
+  background-color: hsl(244, 70%, 96.1%);
+
+}
+
+.counter__value{
+  padding-left: 9rem;
+  color: #6358de;
+}
+
