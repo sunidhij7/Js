@@ -37,9 +37,12 @@ if (document.querySelector(".dropdown")) {
   // replacing drop button text
   options.forEach((option) => {
     option.addEventListener("click", function (event) {
+      dropdown.classList.remove("show");
       const selectedText = event.target.innerText;
       dropdownOpenTrigger.innerText = selectedText;
-      dropdown.classList.remove("show");
+      
+      dropdown.classList.remove("colored");
+      event.target.classList.add("colored")
     });
   });
 
@@ -77,6 +80,8 @@ if (document.querySelector(".modal")) {
   var prevPage = "./dropdown.html";
   var nextPage = "./accordion.html";
 }
+
+
 if (document.querySelector(".accord")) {
   const accordion = document.querySelectorAll(".accordion");
   for (let i = 0; i < accordion.length; i++) {
