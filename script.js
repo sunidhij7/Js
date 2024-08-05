@@ -91,8 +91,6 @@ if (document.querySelector(".modal")) {
   var prevPage = "./dropdown.html";
   var nextPage = "./accordion.html";
 }
-
-
 if (document.querySelector(".accord")) {
   const accordion = document.querySelectorAll(".accordion");
   for (let i = 0; i < accordion.length; i++) {
