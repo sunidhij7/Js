@@ -102,15 +102,35 @@ border: none;
   cursor: pointer;
   background-color: hsl(244, 70%, 96.1%);
   background-color: #212020;
-
-
 }
 
 .modal-panel-header{
   display: flex;
+  justify-content: space-between;
 }
+
 .modal-panel-header__close-trigger{
-  align-self: end;
+  background-color: white;
+  border: none;
+}
+
+.modal-panel-header__close-trigger:hover{
+  cursor: pointer;
+  background-color:rgb(226, 224, 224);
+  border: none;
+  border-radius: 1rem;
+}
+
+.modal-panel-header__title{
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.modal__background-panel__foreground-panel__text{
+  margin-left: 1rem;
+  margin-right: 1rem;
+
 }
 
 /* Accordian */

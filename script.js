@@ -71,7 +71,7 @@ if (document.querySelector(".modal")) {
   const openBtn = document.querySelector(".modal__trigger-button");
   const modal = document.querySelector(".modal__background-panel");
   const closeBtn = document.querySelector(
-    ".modal__background-panel__foreground-panel--close-trigger"
+    ".modal-panel-header__close-trigger"
   );
 
   openBtn.onclick = function () {
