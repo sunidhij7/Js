@@ -9,12 +9,12 @@
 
   <body>
     <!-- Accordian -->
-    <div class="accord">
-      <h1>Accordian</h1>
+    <div class="accordion">
+      <h1>Accordion</h1>
       <ul class="accordion-container">
-        <li class="first-row row">
-          <button class="accordion">Section 1</button>
-          <div class="panel ">
+        <li class="first-row row accordion-row">
+          <button class="accordian--trigger">Section 1</button>
+          <div class="accordion--panel">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -29,9 +29,9 @@
             </p>
           </div>
         </li>
-        <li class="row">
-          <button class="accordion">Section 2</button>
-          <div class="panel">
+        <li class="row accordion-row">
+          <button class="accordian--trigger">Section 2</button>
+          <div class="accordion--panel">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -46,9 +46,9 @@
             </p>
           </div>
         </li>
-        <li class="last-row row">
-          <button class="accordion">Section 3</button>
-          <div class="panel">
+        <li class="last-row row accordion-row">
+          <button class="accordian--trigger">Section 3</button>
+          <div class="accordion--panel">
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -65,7 +65,8 @@
         </li>
       </ul>
     </div>
-    <br />
+    <button class="open-all-button">Expand All</button>
+    <button class="close-all-button">Collapse All</button>
     <br />
     <button class="back-button">Back</button>
     <script src="script.js"></script>

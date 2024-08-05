@@ -91,8 +91,8 @@ if (document.querySelector(".modal")) {
   var prevPage = "./dropdown.html";
   var nextPage = "./accordion.html";
 }
-if (document.querySelector(".accord")) {
-  const accordion = document.querySelectorAll(".accordion");
+if (document.querySelector(".accordion")) {
+  const accordion = document.querySelectorAll(".accordian--trigger");
   for (let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener("click", function () {
       for (let j = 0; j < accordion.length; j++) {
@@ -120,6 +120,27 @@ if (document.querySelector(".accord")) {
     });
   }
   var prevPage = "./modal.html";
+
+  // open all
+  const openAllBtn = document.querySelector(".open-all-button");
+  openAllBtn.addEventListener("click",() =>{
+    for (let i = 0; i < accordion.length; i++) {
+      accordion[i].classList.add("active");
+      accordion[i].parentElement.classList.add("open-tab");
+      accordion[i].nextElementSibling.style.display = "block";
+  }
+  });
+
+  //close all
+  const closeAllBtn = document.querySelector(".close-all-button");
+  closeAllBtn.addEventListener("click",() =>{
+    for (let i = 0; i < accordion.length; i++) {
+      accordion[i].classList.remove("active");
+      accordion[i].parentElement.classList.remove("open-tab");
+      accordion[i].nextElementSibling.style.display = "none";
+  }
+  });
+
 }
 
 //Navigation through buttons
